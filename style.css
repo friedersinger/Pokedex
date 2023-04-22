@@ -6,6 +6,16 @@ body {
 #pokedex {
   display: flex;
   min-height: 50vh;
-  background-color: rgb(191, 12, 12);
+  background-color: rgb(252, 109, 109);
   color: white;
+  padding: 24px;
+}
+
+.info-container {
+  background-color: white;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  height: 100px;
+  margin-top: -40px;
+  min-height: 100px;
 }
