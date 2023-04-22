@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+}
+
+#pokedex {
+  display: flex;
+  min-height: 50vh;
+  background-color: rgb(191, 12, 12);
+  color: white;
+}
