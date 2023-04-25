@@ -138,7 +138,11 @@ function pokedexHTML(name, typeOne, typeTwo, img, id) {
       `;
 }
 
+let AUDIO_NEXT = new Audio("audio/next.mp3");
+
 function loadNext() {
+  AUDIO_NEXT.volume = 0.08;
+  AUDIO_NEXT.play();
   if (counter < 3) {
     counter++;
     loadPokemon();
