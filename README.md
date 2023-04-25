@@ -1,6 +1,6 @@
 # Pokemon Project
 
-This is a simple web page that displays information about different Pokemon species. The data for this project is sourced from the PokeAPI.
+This is a web page that displays information about different Pokemon species. The data for this project is sourced from the PokeAPI.
 
 ## Usage
 
