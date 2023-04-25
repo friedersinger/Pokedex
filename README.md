@@ -14,10 +14,6 @@ The main logic of this project is implemented in JavaScript. The code is split i
 
 There are also several helper functions, such as `typeIsVoid`, which checks whether a Pokemon has a second type, and `pokedexHTML`, which generates the HTML code for a Pokemon card.
 
-## Credits
-
-This project was created by [INSERT YOUR NAME HERE]. The data for this project was sourced from the PokeAPI. The Pokemon-themed GIF on the start page was obtained from GIPHY. The background image on the main page was obtained from Pexels.
-
 ## License
 
 This project is licensed under the MIT License.
