@@ -41,10 +41,10 @@ function bluryBackground() {
 // Returns the HTML for the blurry background
 function bluryBackgroundHTML() {
   return /*html*/ `
-            <div id="statsBackground" class="statsBackground" onclick="showAll()">
-    
-            </div>
-        `;
+          <div id="statsBackground" class="statsBackground" onclick="showAll()">
+  
+          </div>
+      `;
 }
 
 // Renders the stats container for the current Pokemon
@@ -157,60 +157,60 @@ function clickedTypeIsVoid(typeTwo) {
 
 function statsContainerHTML(id) {
   return /*html*/ `
-      <div>
-          <div id="statsTop" class="statsTop">
-              <div class="nameIdArea">
-                  <h2 id="clickedName"></h2>
-                  <h4 id="clickedId">#</h4>
-              </div>
-              <div class="typeArea">
-                  <h4 id="clickedTypeOne"></h4>
-                  <h4 id="clickedTypeTwo"></h4>
-              </div>
-          </div>
-          <div id="statsBottom" class="statsBottom">
-              <div class="imageToCenter">
-                  <img class=clickedImage id="clickedImage">
-              </div>
-              <div class="changeStatsArea">
-                  <img id="previousImage" class="smallPNG left" onclick="showStats(${
-                    id - 1
-                  })">
-                  <div class="navArea">
-                      <p onclick="showStats(${id})" id="aboutTab">ABOUT</p>
-                      <p onclick="statsSection(${id})" id="statsTab">BASE STATS</p>
-                      <p onclick="movesSection(${id})" id="movesTab">MOVES</p>
-                  </div>
-                  <img id="nextImage" class="smallPNG right" onclick="showStats(${
-                    id + 1
-                  })">
-              </div>
-              <div id="section">
-                  <table>
-                      <tr>
-                          <th>Height:</th>
-                          <td id="height"></td>
-                      </tr>
-                      <tr>
-                          <th>Weight:</th>
-                          <td id="weight"></td>
-                      </tr>
-                      <tr>
-                          <th>Held Items:</th>
-                          <td id="heldItems"></td>
-                      </tr>
-                      <tr>
-                          <th>Abilities:</th>
-                          <td id="abilities"></td>
-                      </tr>
-                  </table>
-              </div>
-              <div class="closeButton">
-                  <button class="btn btn-secondary" type="submit" onclick="showAll()">Close</button>
-              </div>
-          </div>
-      </div>
-      `;
+    <div>
+        <div id="statsTop" class="statsTop">
+            <div class="nameIdArea">
+                <h2 id="clickedName"></h2>
+                <h4 id="clickedId">#</h4>
+            </div>
+            <div class="typeArea">
+                <h4 id="clickedTypeOne"></h4>
+                <h4 id="clickedTypeTwo"></h4>
+            </div>
+        </div>
+        <div id="statsBottom" class="statsBottom">
+            <div class="imageToCenter">
+                <img class=clickedImage id="clickedImage">
+            </div>
+            <div class="changeStatsArea">
+                <img id="previousImage" class="smallPNG left" onclick="showStats(${
+                  id - 1
+                })">
+                <div class="navArea">
+                    <p onclick="showStats(${id})" id="aboutTab">ABOUT</p>
+                    <p onclick="statsSection(${id})" id="statsTab">BASE STATS</p>
+                    <p onclick="movesSection(${id})" id="movesTab">MOVES</p>
+                </div>
+                <img id="nextImage" class="smallPNG right" onclick="showStats(${
+                  id + 1
+                })">
+            </div>
+            <div id="section">
+                <table>
+                    <tr>
+                        <th>Height:</th>
+                        <td id="height"></td>
+                    </tr>
+                    <tr>
+                        <th>Weight:</th>
+                        <td id="weight"></td>
+                    </tr>
+                    <tr>
+                        <th>Held Items:</th>
+                        <td id="heldItems"></td>
+                    </tr>
+                    <tr>
+                        <th>Abilities:</th>
+                        <td id="abilities"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="closeButton">
+                <button class="btn btn-secondary" type="submit" onclick="showAll()">Close</button>
+            </div>
+        </div>
+    </div>
+    `;
 }
 
 function showAll() {
