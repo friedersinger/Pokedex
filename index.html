@@ -1,37 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokedex</title>
-
-    <script src="script.js"></script>
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Bootstrap CSS -->
+    <title>Pokédex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
+      type="text/css"
+      media="screen"
+      href="./css/style.css"
     />
-
-    <link rel="stylesheet" href="fontsGoogle.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/pokemonTypes.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/responsiv.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/stats.js"></script>
+    <link rel="icon" href="./img/png/logo_small.png" />
   </head>
-  <body onload="loadPokemon()">
-    <div id="pokedex">
-      <h1 id="pokemonName">Name</h1>
+
+  <body id="body" onload="loadPokemon()" style="overflow: hidden">
+    <div id="statsContainer" class="statsContainer statsHidden"></div>
+    <div id="bluryBackground"></div>
+    <div id="start" class="start">
+      <img class="startGif" src="./img/gif/pikachu.gif" />
+      <button class="goButton" type="submit" onclick="join()" id="nextButton">
+        LET'S GET STARTED
+      </button>
     </div>
-    <div class="info-container">
-      <img id="pokemonImage" />
-    </div>
+    <img class="backgroundImg" src="./img/background.jpeg" />
+    <header>
+      <nav class="navbar">
+        <div class="container-fluid">
+          <img class="leftSide" src="./img/png/logo.png" />
+          <div class="rightSide">
+            <div class="dropdown">
+              <a
+                class="selectButton dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Select type
+              </a>
+
+              <ul class="dropdown-menu selectTypeMenu">
+                <li>
+                  <a
+                    onclick="selectedType('all')"
+                    class="dropdown-item"
+                    href="#"
+                    >All</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('grass')"
+                    class="dropdown-item Grass"
+                    href="#"
+                    >Grass</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('poison')"
+                    class="dropdown-item Poison"
+                    href="#"
+                    >Poison</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('fire')"
+                    class="dropdown-item Fire"
+                    href="#"
+                    >Fire</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('water')"
+                    class="dropdown-item Water"
+                    href="#"
+                    >Water</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('flying')"
+                    class="dropdown-item Flying"
+                    href="#"
+                    >Flying</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('bug')"
+                    class="dropdown-item Bug"
+                    href="#"
+                    >Bug</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('normal')"
+                    class="dropdown-item Normal"
+                    href="#"
+                    >Normal</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('electric')"
+                    class="dropdown-item Electric"
+                    href="#"
+                    >Electric</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('ground')"
+                    class="dropdown-item Ground"
+                    href="#"
+                    >Ground</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('fairy')"
+                    class="dropdown-item Fairy"
+                    href="#"
+                    >Fairy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('fighting')"
+                    class="dropdown-item Fighting"
+                    href="#"
+                    >Fighting</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('psychic')"
+                    class="dropdown-item Psychic"
+                    href="#"
+                    >Psychic</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('rock')"
+                    class="dropdown-item Rock"
+                    href="#"
+                    >Rock</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('ice')"
+                    class="dropdown-item Ice"
+                    href="#"
+                    >Ice</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('ghost')"
+                    class="dropdown-item Ghost"
+                    href="#"
+                    >Ghost</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('steel')"
+                    class="dropdown-item Steel"
+                    href="#"
+                    >Steel</a
+                  >
+                </li>
+                <li>
+                  <a
+                    onclick="selectedType('dragon')"
+                    class="dropdown-item Dragon"
+                    href="#"
+                    >Dragon</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <form class="d-flex" role="search">
+              <input
+                class="inputSearch"
+                type="search"
+                placeholder="search of loaded..."
+                aria-label="Search"
+                oninput="input()"
+                id="search"
+              />
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="pokedex" id="pokedex"></div>
+      <div class="showInformations d-none"></div>
+    </main>
+    <footer id="hide">
+      <button
+        class="nextButton"
+        type="submit"
+        onclick="loadNext()"
+        id="nextButton"
+      >
+        Load next 30 Pokemon!
+      </button>
+    </footer>
   </body>
 </html>
