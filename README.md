@@ -4,7 +4,7 @@ This is a web page that displays information about different Pokemon species. Th
 
 ## Usage
 
-To use this project, simply open the `index.html` file in a web browser. On the start page, you will see a Pokemon-themed GIF and a button that says "Join the Adventure!" Clicking the button will take you to the main page of the project, where you can view information about different Pokemon species.
+To use this project, simply open the `(https://pokedex-frieder.netlify.app)` in a web browser. On the start page, you will see a Pokemon-themed GIF and a button that says "Join the Adventure!" Clicking the button will take you to the main page of the project, where you can view information about different Pokemon species.
 
 Each Pokemon card on the main page displays the Pokemon's name, ID number, types, and an image. Clicking on a card will display additional information about that Pokemon, such as its height, weight, and base stats.
 
