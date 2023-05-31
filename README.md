@@ -1,5 +1,7 @@
 # Pokemon Project
 
+https://pokedex-frieder.netlify.app
+
 This is a web page that displays information about different Pokemon species. The data for this project is sourced from the PokeAPI.
 
 ## Usage
